@@ -1,12 +1,15 @@
-import { useState } from "react";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Posts from "./pages/Posts";
+import Navbar from "./components/Navbar";
+import Layout from "./pages/Layout";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>something</h1>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+      </Routes>
     </>
   );
 }
