@@ -1,26 +1,31 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import ProfileMini from "../components/ProfileMini";
 
 const Layout = () => {
   return (
-    <div className="h-[100vh] bg-gray-600 flex justify-center py-6 overflow-hidden">
-      <div className="overflow-hidden flex flex-col container p-2 bg-gray-500 rounded-md">
-        <header className="flex flex-col justify-center rounded-t-md mb-2">
-          <Navbar />
-        </header>
-        <div className="overflow-hidden flex h-full">
-          <aside className="hidden sm:block rounded-md shadow-md mr-2 bg-gray-300 w-[25%]">
-            Left
-          </aside>
+    <div className="pb-4">
+      <header className="flex flex-col justify-center rounded-t-md mb-2">
+        <Navbar />
+      </header>
+      <main className="flex justify-center">
+        <div className="flex flex-col justify-center h-full container p-2 bg-gray-500 rounded-md">
+          <div className="flex  px-2">
+            <aside className="w-[25%] hidden lg:flex flex-col gap-4 rounded-md mr-2  ">
+              <ProfileMini />
+              {/* <ProfileMini /> */}
+            </aside>
 
-          <Outlet />
+            <Outlet />
 
-          <aside className="hidden lg:block rounded-md shadow-md ml-2 bg-gray-300 w-[25%]">
-            Right
-          </aside>
+            <aside className="w-[35%] hidden lg:flex flex-col gap-4 rounded-md ml-2">
+              <ProfileMini />
+              <ProfileMini />
+            </aside>
+          </div>
         </div>
-        {/* <footer className="h-[8%] bg-yellow-200 mt-2">footer</footer> */}
-      </div>
+      </main>
+      {/* <footer className="h-[8%] bg-yellow-200 mt-2">footer</footer> */}
     </div>
   );
 };

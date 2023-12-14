@@ -13,7 +13,7 @@ const Navbar = () => {
         </div>
       </Link>
       <div className="">
-        <form>
+        <form className="md:block hidden">
           <input
             type="text"
             placeholder="Search"
