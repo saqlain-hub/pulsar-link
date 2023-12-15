@@ -3,8 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
   return (
-    <div className="bg-yellow-200 p-4 overflow-y-auto rounded-md w-full lg:w-[75%]">
-      Root
+    <div className="overflow-y-auto rounded-md w-full">
       <Outlet />
     </div>
   );
