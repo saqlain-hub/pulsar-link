@@ -9,6 +9,16 @@
   a {
     @apply text-blue-600;
   }
+  .open h3 {
+    @apply font-bold text-[1.1rem] mt-2 text-white;
+  }
+  .open p {
+    @apply text-white;
+  }
+
+  .open div:not(:first-child) {
+    @apply border-t-[1px] py-2;
+  }
 }
 /* width */
 ::-webkit-scrollbar {
