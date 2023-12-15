@@ -8,8 +8,8 @@ const Layout = () => {
         <Navbar />
       </header>
       <main className="flex justify-between py-2 px-4">
-        <div className="h-full w-full bg-gray-500 rounded-md p-2">
-          <div className="flex gap-4 px-2">
+        <div className=" w-full bg-gray-500 rounded-md p-2">
+          <div className="flex gap-4 px-2 h-[85vh]">
             <Sidebar />
             <Outlet />
           </div>
