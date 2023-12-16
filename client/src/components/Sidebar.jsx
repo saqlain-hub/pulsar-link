@@ -8,7 +8,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`lg:block hidden relative open bg-gray-800 rounded-md origin-left duration-[2s] ${
+      className={`h-[100%] sticky top-0 lg:block hidden open bg-gray-800 rounded-md origin-left duration-[2s] ${
         !open ? "w-20" : "w-60"
       } px-4 py-4`}
     >

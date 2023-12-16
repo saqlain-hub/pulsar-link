@@ -7,14 +7,16 @@ const Layout = () => {
       <header className="flex flex-col justify-center rounded-t-md mb-2">
         <Navbar />
       </header>
-      <main className="flex justify-between py-2 px-4">
-        <div className=" w-full bg-gray-500 rounded-md p-2">
-          <div className="flex gap-4 px-2 h-[85vh]">
-            <Sidebar />
-            <Outlet />
+      <div className="container mx-auto flex justify-between">
+        <Sidebar />
+        <main className="flex justify-between py-2 px-4">
+          <div className=" w-full bg-gray-500 rounded-md p-2">
+            <div className="flex gap-4 px-2 h-[85vh]">
+              <Outlet />
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
       {/* <footer className="h-[8%] bg-yellow-200 mt-2">footer</footer> */}
     </>
   );

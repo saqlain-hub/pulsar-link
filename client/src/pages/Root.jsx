@@ -6,10 +6,12 @@ import UploadPost from "./UploadPost";
 const Root = () => {
   return (
     <>
-      <div className="w-full px-4 overflow-auto bg-gray-600 rounded-md">
+      <div className="w-full overflow-auto bg-gray-600 rounded-md">
         <Dashboard />
-        <UploadPost />
-        <Outlet />
+        <div className="px-4">
+          <UploadPost />
+          <Outlet />
+        </div>
       </div>
     </>
   );
