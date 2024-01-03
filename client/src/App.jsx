@@ -1,25 +1,31 @@
+import react, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import Posts from "./pages/Posts";
-import Layout from "./pages/Layout";
-import Root from "./pages/Root";
-import NotFound from "./pages/NotFound";
-
+import Layout from "./comps/Layout";
+import Profile from "./comps/Profile";
+import Login from "./comps/Login";
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <>
       <Routes>
-        <Route element={<Layout />}>
-          <Route element={<Root />}>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/posts" element={<Posts />} />
-            {/* <Route path="/post/:id" element={<Post />} /> */}
-          </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Layout isLoggedIn={isLoggedIn} />}>
+          <Route path="profile" element={<Profile />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
 }
 
 export default App;
+
+{
+  /* <Route element={<Layout />}>
+          <Route element={<Root />}>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/posts" element={<Posts />} />
+            <Route path="/post/:id" element={<Post />} /> 
+          </Route>
+        </Route>
+        <Route path="*" element={<NotFound />} /> */
+}
