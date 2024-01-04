@@ -1,21 +1,19 @@
-import React, { useEffect } from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
-const Layout = ({ isLoggedIn }) => {
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
+const Layout = () => {
   return (
     <>
-      <main className="bg-slate-800 h-screen w-full">
-        <div>
-          <section>
-            <p>right</p>
-            <Link to="profile">to profile</Link>
-          </section>
-          <section>
-            center
-            <Outlet />
-          </section>
-          <section>left</section>
-        </div>
-      </main>
+      <div className="bg-slate-800 h-screen w-full">
+        <section>
+          <Navbar />
+          <p>right</p>
+        </section>
+        <main>
+          <Outlet />
+        </main>
+        <section>Left</section>
+      </div>
     </>
   );
 };
